@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>All Categories</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Dev Mart</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                  <h6>Welcome: {{user.username}}</h6>
+                  <br>
+                  <h5>Catergories hello</h5>
+                  <br>
+                    {% for category in categories %}
+                                <div>
+                                    <h2>
+                                      <a href='/products/{{category["categoryname"]}}'>{{category["categoryname"]}}</a>
+                                    </h2>
+                                    <br>
+                                    <br>
+                                    <!-- {% for item in category["items"] %}
+                                            {{item["productname"]}}
+                                    {% endfor %} -->
+                                </div>
+                    {% endfor %}
+                </div>
+                <div class ="col-md-4">
+                  <a href='/profile'>Profile</a>
+                  <br>
+                  <a href='/cart'>Cart</a>
+                  <br>
+                  <a href='/orders'>Orders</a>
+                  <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

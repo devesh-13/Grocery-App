@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>All Categories</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Dev Mart</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                  <h1>Welcome: {{user.username}}</h1>
+                  <br>
+                  <h2>ALL Catergories </h2>
+                  <br>
+                  <table class='table'>
+                    <thead>
+                      <th>CATEGORY ID</th>
+                      <th>CATEGORY NAME</th>
+                    </thead>
+                    <tbody>
+                      {% for category in categories %}
+                        <tr>
+                          <td>{{category.id}}</td>
+                          <td><a href='/products/{{category.name}}'>{{category.name}}</a></td>
+
+                        </tr>
+                      {% endfor %}
+
+                    </tbody>
+                  </table>
+                </div>
+                <div class ="col-md-4">
+                  <h1>Which Category you want to see</h1>
+
+                  <form method="POST">
+                    <label for='name'>name:</label>
+                      <input type="text" name="name" id='name'/>
+                    <br>
+                    <label for='username'>id:</label>
+                      <input type="text" name="username" id='username'/>
+                    <br>
+                      <input type="submit" name="name"/>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

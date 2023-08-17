@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Products</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Dev Mart</h1>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                  <h1>Welcome: </h1>
+                  <br>
+                  <h2>ALL PRODUCTS  </h2>
+                  <br>
+                  <table class='table'>
+                    <thead>
+                      <th>PRODUCT ID</th>
+                      <th>PRODUCT NAME</th>
+                      <th>QUANTITY</th>
+                      <th>MAN DATE</th>
+                    </thead>
+                    <tbody
+                      {% for product in products %}
+                        <tr>
+                          <td>{{product.id}}</td>
+                          <td>{{product.name}}</td>
+                          <td>{{product.quantity}}</td>
+                          <td>{{product.man_date}}</td>
+                        </tr>
+                      {% endfor %}
+
+                    </tbody>
+                  </table>
+                </div>
+                <div class ="col-md-4">
+                  <a href='/add_category'>ADD PRODUCT</a>
+                  <br>
+                  <a href='/edit_category'>EDIT PRODUCT</a>
+                  <br>
+                  <a href='/delete_category'>DELETE PRODUCT</a>
+                  <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
