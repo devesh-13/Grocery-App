@@ -4,7 +4,7 @@
 
 Steps to test the App:
 Open cmd
-1)Install python: pip install python
+1)Install python: 'pip install python'
 2)Download the folder from the repository:'Grocery App'
 3)Go to the directory run:'pip install -r requirements.txt' on the cmd
 4)Run 'main.py' on the cmd
